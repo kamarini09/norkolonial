@@ -1,0 +1,449 @@
+@font-face {
+  font-family: TheBystanderSans;
+  src: url(fonts/BystanderSans-Bold.woff);
+}
+
+:root {
+  --red: #ee3035;
+  --blue: #76b3e2;
+  --yellow: #f0c22f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "barlow", serif;
+}
+
+h1 {
+  font-family: TheBystanderSans;
+  color: white;
+  text-shadow: 0.2rem 0.2rem black;
+  text-align: center;
+  font-size: calc(32px + 1vw);
+  padding: 3rem 0 1rem 0;
+}
+
+h2 {
+  font-family: TheBystanderSans;
+  color: white;
+  font-size: calc(12px + 1vw);
+  padding-bottom: 0.8rem;
+  text-shadow: 0.1rem 0.1rem black;
+}
+
+h3 {
+  color: white;
+  font-weight: 700;
+}
+
+div.opening-hours p,
+div.map p {
+  color: white;
+  font-size: calc(10px + 0.4vw);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.bgr-red {
+  background-color: var(--red);
+}
+
+.bgr-blue {
+  background-color: var(--blue);
+}
+
+.bgr-yellow {
+  background-color: var(--yellow);
+}
+
+/* --- NAV BAR --- */
+header {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  padding-bottom: 1rem;
+  z-index: 1;
+}
+
+.nav-bar {
+  grid-column: 2/-2;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-bar img {
+  max-height: 50px;
+  padding: 1rem 0 1rem 0;
+}
+
+ul.nav {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.nav li a {
+  font-size: calc(8px + 0.4vw);
+  text-decoration: none;
+  color: black;
+}
+
+ul.nav li a:active {
+  font-weight: bold;
+}
+
+/* --- Sections --- */
+
+#section-2-who-we-are {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 3rem;
+}
+
+#section-3-products {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+#section-3-products,
+#section-4-producers,
+#section-5-where-are-we {
+  padding-bottom: 3rem;
+}
+
+.section-1-text,
+.section-2-text,
+.section-3-text,
+.section-4-text,
+.section-5-where-are-we h1 {
+  grid-column: 2/-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-1-text p,
+.section-2-text p,
+.section-3-text p,
+.section-4-text p {
+  max-width: 60%;
+  text-align: center;
+  color: white;
+  font-size: calc(10px + 0.6vw);
+  padding-bottom: 3rem;
+}
+
+.section-3-text p,
+.section-4-text p {
+  color: black;
+}
+
+.section-1-text img {
+  max-width: 50%;
+  padding: 3rem 0 3rem 0;
+}
+
+#section-2-who-we-are img {
+  align-self: center;
+  max-width: 80%;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.home img {
+  width: 100%;
+}
+
+/* --- GALLERY HORIZONTAL SCROLLING --- */
+
+.gallery {
+  grid-column: 2/3;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+div.gallery ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+ul.images li img {
+  max-width: 20vh;
+}
+
+figcaption {
+  font-size: calc(8px + 0.4vw);
+}
+/* ----- PRODUCERS LOGOS ----- */
+.section-4-producers {
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+}
+
+.producers-array {
+  grid-column: 2/-2;
+  display: flex;
+  flex-flow: wrap row;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+.company {
+  position: relative;
+  max-width: 40%;
+}
+
+.company-logo {
+  max-width: 100%;
+  opacity: 100%;
+}
+
+.company-logo:hover {
+  opacity: 10%;
+}
+
+.company-description {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: calc(12px + 0.4vw);
+  z-index: -1;
+}
+
+.company-origin {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  font-size: calc(10px + 0.4vw);
+  z-index: -1;
+  margin-top: 0.8rem;
+}
+
+.company-name {
+  text-align: center;
+}
+
+div.opening-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+div.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+iframe {
+  max-width: 80%;
+}
+
+footer {
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  padding: 2rem 0 2rem 0;
+}
+
+.footer-contents {
+  grid-column: 2/-2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+footer img {
+  max-height: 80px;
+  align-self: center;
+}
+
+.contacts p,
+.contacts h3,
+.social-media h3,
+.social-media a {
+  padding-bottom: 0.5rem;
+  font-size: calc(8px + 0.4vw);
+}
+
+/* ----------------------------------- MEDIA QUERY ----------------------------------- */
+
+/* we want to change the CSS for the desktop view and not the other way around.
+We define the mobile version first and then everything else */
+@media only screen and (min-width: 800px) {
+  h1 {
+    text-align: left;
+    font-size: calc(40px + 0.4vw);
+  }
+
+  /* --- nav bar - desktop --- */
+  header {
+    padding-bottom: 0;
+  }
+
+  .nav-bar {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .nav-bar img {
+    max-height: 50px;
+  }
+
+  ul.nav {
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 0;
+  }
+
+  ul.nav li a:hover {
+    text-decoration: underline #76b3e2 3px;
+    text-underline-offset: 5px;
+  }
+
+  .home {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  #section-2-who-we-are,
+  #section-3-products,
+  #section-4-producers,
+  #section-5-where-are-we {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  #section-2-who-we-are {
+    background-color: var(--blue);
+  }
+
+  #section-3-products {
+    padding: 3rem 0 3rem 0;
+  }
+
+  .gallery {
+    grid-column: 2/4;
+  }
+
+  .section-2-text,
+  .section-3-text,
+  .section-4-text,
+  #section-5-where-are-we h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    grid-column: 2/3;
+  }
+
+  .section-3-text,
+  .section-4-text,
+  #section-5-where-are-we h1 {
+    grid-column: 2/4;
+  }
+  div.opening-hours {
+    grid-column: 2/3;
+  }
+
+  .section-1-text p {
+    padding-bottom: 0;
+  }
+  .section-2-text p {
+    text-align: left;
+    max-width: 80%;
+  }
+
+  .section-3-text p,
+  .section-4-text p {
+    text-align: left;
+    max-width: 40%;
+  }
+
+  .section-1-text img {
+    max-width: 50%;
+    padding: 3rem;
+  }
+
+  #section-2-who-we-are img {
+    max-width: 100%;
+  }
+
+  ul.images li img {
+    max-width: 35vh;
+  }
+
+  /* note: I'm using grid for desktop version and flexbox for mobile version. That's because with flexbox i couldn't reach the effect I wanted: in fact with spacebetween i was filling the entire row, but i couldn't impose a left alignmnet for the last row when there were less items that in the first. */
+  .producers-array {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    place-items: center;
+  }
+
+  .company {
+    max-width: 100%;
+    padding-bottom: 1.5rem;
+  }
+
+  .company-description {
+    top: 35%;
+  }
+
+  div.opening-hours {
+    text-align: left;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  .footer-contents {
+    justify-content: space-between;
+  }
+
+  footer img {
+    max-height: 50px;
+  }
+}
