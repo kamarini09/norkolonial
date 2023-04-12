@@ -28,10 +28,6 @@ function setup() {
 
 
 function getGoodies() {
-  // let endpoint2 = endpoint + "?categories=2&_embed";
-  // console.log(endpoint2);
-  // fetch(endpoint2)
-
   fetch(`data.json`)
     .then(res => res.json())
     .then(data => {
