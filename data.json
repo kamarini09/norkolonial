@@ -14,7 +14,7 @@
     {
       "title": "Honey",
       "desc": "Honey from Greeces local beekeepers to get you cooking a natural sugar and the sweet taste of honey in your tea.",
-      "img": "assets/2.jpg"
+      "img": "./assets/2.jpg"
     },
   
     {
